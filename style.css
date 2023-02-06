@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+ 
+}
+
+.banjo{
+ 
+background-color: purple;
+height: 99vh;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+align-content: center;
+flex-wrap:flex;
+flex-direction: row;
+
+}
+
+.pipani{
+    position: absolute;
+    top:5rem;
+    color: white;
+
+}
+
+
+.a{
+    background-image: url('image/download.jfif');
+}
+.s{
+    background-image: url('image/images.jfif');
+}
+.d{
+    background-image: url('image/images1.jfif');
+}
+.f{
+    background-image: url('image/images2.jfif');
+}
+.g{
+    background-image: url('image/images3.jfif');
+}
+.h{
+    background-image: url('image/images4.jfif');
+}
+.j{
+    background-image: url('image/images1.jfif');
+}
+.k{
+    background-image: url('image/images1.jfif');
+}
+.l{
+    background-image: url('image/images2.jfif');
+}
+
+
+  .banjo .btn {
+    outline: none;
+    margin-top: 1rem;
+    width: 135px;
+    height: 135px;
+    border: 1px solid #404B69;
+    font-size: 5rem;
+    font-family: 'Gill Sans';
+    color:purple;
+    text-shadow: 3px 0 #DBEDF3;
+    border-radius: 15px;
+    display:flex;
+    text-align: center;
+
+  }
+
+
+
+
+    
+
+@media(max-width:732px){
+
+    .banjo{
+        
+        display: flex;
+        align-items:baseline;
+        justify-content:space-evenly;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+          
+    }
+
+.banjo .btn{
+    margin-top: 0rem;
+    gap:10px;
+font-size: 5rem;
+ display: flex;
+ box-sizing: border-box;
+ height:100px;
+ width:100px;
+ margin-left:50px;
+ margin-bottom: 10px;
+}  
+
+.pipani{
+color:black;
+}
+ }

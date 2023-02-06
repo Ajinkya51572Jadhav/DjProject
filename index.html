@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="banjo">
+        <h1 class="pipani">drum🎺 banjo</h1>
+ <button class="btn a">a</button>
+ <button class="btn s">s</button>
+ <button class="btn d">d</button>
+ <button class="btn f">f</button>
+ <button class="btn g">g</button>
+ <button class="btn h">h</button>
+ <button class="btn j">j</button>
+ <button class="btn k">k</button>
+ <button class="btn"  onclick="load()">l</button>
+    </div>
+<script>
+
+let lengths = document.querySelectorAll('.btn').length;
+
+for(let i=0;i<lengths;i++){
+
+    document.querySelectorAll('.btn')[i].addEventListener('click',function(){
+        console.log([i])
+let access = this.innerHTML;
+console.log(access);
+sound(access);
+buttonpress(access);
+    });
+    }
+
+    document.addEventListener("keypress",function(e){
+console.log(e.key);
+sound(e.key);
+buttonpress(e.key);
+})
+
+function sound(key){
+
+switch(key){
+
+ case 'a': let banjo  =new Audio('sounds/banjo.mp3');      banjo.play();
+break;
+
+
+case 's': let  crash  =new Audio('sounds/crash.mp3');   crash.play();
+break;
+
+
+case 'd': let dhapali  =new Audio('sounds/dhapali.mp3');      dhapali.play();
+break;
+
+
+case 'f': let djbhatiya  =new Audio('sounds/djbhatiya.mp3');   djbhatiya.play();
+break;
+
+
+case 'g': let kick  =new Audio('sounds/kick-bass.mp3');      kick.play();
+break;
+
+
+case 'h': let laggur  =new Audio('sounds/laggur.mp3');   laggur.play();
+break;
+
+case 'j': let snare  =new Audio('sounds/snare.mp3');      snare.play();
+break;
+
+
+case 'k': let sounds_ride  =new Audio('sounds/sounds_ride.wav');   sounds_ride.play();
+break;
+default :console.log(key);
+
+}
+}
+
+ function buttonpress(ekey){
+
+   let  addClass = document.querySelector("."+ekey);  
+   console.log(addClass);
+    addClass.classList.add('pressed');
+
+    setTimeout(function(){
+       addClass.classList.remove('pressed'); 
+    },1000000000)
+
+}
+
+function load(){
+    setTimeout(()=>{
+        let IPL  =new Audio('sounds/IPL.m4a');
+       IPL.play();
+
+    },1000)
+    
+}
+
+
+
+</script>
+    
+
+
+
+</body>
+</html>
